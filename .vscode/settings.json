@@ -1,0 +1,7 @@
+{
+    "chatgpt.gpt3.apiKey": "sk-facd1de142374681adc06f48402354c1",
+    "chatgpt.gpt3.model": "custom",
+    "chatgpt.gpt3.customModel": "deepseek-chat",
+    "chatgpt.gpt3.apiBaseUrl": "https://api.deepseek.com/v1",
+    "chatgpt.gpt3.temperature": 0
+}
