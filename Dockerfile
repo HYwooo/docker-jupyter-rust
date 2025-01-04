@@ -26,8 +26,8 @@ RUN cargo install evcxr_jupyter
 
 RUN evcxr_jupyter --install
     
-RUN mkdir /root/workspace
+RUN cd /root && git clone https://github.com/HYwooo/docker-jupyter-rust.git 
 
 EXPOSE 8888
 
-CMD ["jupyter", "lab", "--ip=0.0.0.0", "--port=8888", "--notebook-dir=/root/workspace", "--allow-root", "--no-browser","--NotebookApp.token=''"]
+CMD ["jupyter", "lab", "--ip=0.0.0.0", "--port=8888", "--notebook-dir=/root/docker-jupyter-rust", "--allow-root", "--no-browser","--NotebookApp.token=''"]
