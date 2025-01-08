@@ -1,8 +1,8 @@
-FROM ubuntu:latest
+FROM hywooo/rust-stable-ubuntu:master
 
 # System packages 
-RUN apt update -y && apt install -y curl ca-certificates sudo --quiet --no-install-recommends
 RUN curl -sSL https://gcore.jsdelivr.net/gh/HYwooo/install@master/aptmirror.sh | sudo sh
+
 
 # Install miniconda to /miniconda
 RUN curl -LO http://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh && \
