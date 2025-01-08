@@ -1,4 +1,4 @@
-name: Docker-Publish
+name: publish jupyter-rust image
 
 # This workflow uses actions that are not certified by GitHub.
 # They are provided by a third-party and are governed by
@@ -18,7 +18,7 @@ env:
   # Use docker.io for Docker Hub if empty
   REGISTRY: docker.io
   # github.repository as <account>/<repo>
-  IMAGE_NAME: hywooo/jupyter-rust
+  IMAGE_NAME: ${{ secrets.DOCKERHUB_USERNAME }}/jupyter-rust
 
 
 jobs:
