@@ -17,7 +17,9 @@ RUN conda init zsh && conda update -y conda
 
 RUN conda install -c anaconda cmake -y
 
-RUN conda install -y -c conda-forge nb_conda_kernels jupyterlab
+RUN conda install -y -c conda-forge nb_conda_kernels 
+
+RUN conda install -y -c conda-forge jupyterlab
 
 # install evcxr_jupyter
 RUN cargo install evcxr_jupyter 
