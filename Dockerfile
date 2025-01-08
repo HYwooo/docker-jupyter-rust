@@ -27,7 +27,7 @@ RUN apt install -y gcc g++
 
 RUN cargo install evcxr_jupyter 
 
-RUN evcxr_jupyter --install
+RUN zsh -c evcxr_jupyter --install
     
 RUN cd /root && git clone https://github.com/HYwooo/docker-jupyter-rust.git 
 
