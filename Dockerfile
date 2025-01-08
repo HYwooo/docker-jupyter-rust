@@ -1,4 +1,4 @@
-FROM hywooo/rust-stable-ubuntu:master
+FROM hywooo/rust-stable-ubuntu:v0.0.1
 
 # System packages 
 RUN curl -sSL https://gcore.jsdelivr.net/gh/HYwooo/install@master/aptmirror.sh | sudo sh
