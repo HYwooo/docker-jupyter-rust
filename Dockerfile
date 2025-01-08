@@ -12,7 +12,7 @@ RUN curl -LO http://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.s
 
 # configure & update conda
 ENV PATH=/miniconda/bin:${PATH} \
-    SHELL=$(which zsh)
+    SHELL=/usr/bin/zsh
     
 RUN conda init zsh && conda update -y conda 
 
