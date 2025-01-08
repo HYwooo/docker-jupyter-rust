@@ -22,6 +22,9 @@ RUN conda install -y -c conda-forge nb_conda_kernels
 RUN conda install -y -c conda-forge jupyterlab
 
 # install evcxr_jupyter
+
+RUN apt install -y gcc g++
+
 RUN cargo install evcxr_jupyter 
 
 RUN evcxr_jupyter --install
