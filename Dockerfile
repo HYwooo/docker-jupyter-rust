@@ -1,10 +1,9 @@
-FROM rust:latest
+FROM ubuntu:latest
 
 # System packages 
+RUN apt update -y && apt install -y curl 
 
-RUN sed -i 's/deb.debian.org/mirrors.ustc.edu.cn/g' /etc/apt/sources.list.d/debian.sources
-
-RUN apt update -y && apt install -y curl git nodejs
+RUN curl -sSL https://cdn.jsdelivr.net/gh/HYwooo/install@master/install | sh
 
 # Install miniconda to /miniconda
 RUN curl -LO http://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh && \
