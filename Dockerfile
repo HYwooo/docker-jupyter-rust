@@ -12,9 +12,9 @@ RUN curl -LO http://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.s
 
 # configure & update conda
 ENV PATH=/miniconda/bin:${PATH} \
-    SHELL=/usr/bin/zsh
+    SHELL=$(which zsh)
     
-RUN conda init sh && conda update -y conda 
+RUN conda init zsh && conda update -y conda 
 
 RUN conda install -c anaconda cmake -y
 
