@@ -1,12 +1,12 @@
 FROM hywooo/rust-stable-ubuntu:v0.0.1
 
 # System packages 
-RUN curl -sSL https://gcore.jsdelivr.net/gh/HYwooo/install@master/aptmirror.sh | sudo sh
+RUN curl -sSL https://gcore.jsdelivr.net/gh/HYwooo/install@master/aptmirror.sh | sudo zsh
 
 
 # Install miniconda to /miniconda
 RUN curl -LO http://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh && \
-    bash Miniconda3-latest-Linux-x86_64.sh -p /miniconda -b && \
+    zsh Miniconda3-latest-Linux-x86_64.sh -p /miniconda -b && \
     rm Miniconda3-latest-Linux-x86_64.sh
 
 # configure & update conda
