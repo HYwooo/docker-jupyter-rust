@@ -1,9 +1,9 @@
 FROM ubuntu:latest
 
 # System packages 
-RUN apt update -y && apt install -y curl 
+RUN apt update -y && apt install -y curl wget ca-certificates
 
-RUN curl -sSL https://cdn.jsdelivr.net/gh/HYwooo/install@master/install | sh
+RUN curl -sSL https://raw.githubusercontent.com/HYwooo/install/refs/heads/master/install | sh
 
 # Install miniconda to /miniconda
 RUN curl -LO http://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh && \
