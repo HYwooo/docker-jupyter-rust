@@ -6,7 +6,7 @@ LABEL description="Docker image for Jupyter Lab with Rust and Conda support."
 
 # Install system packages using a custom script
 # The script configures apt mirrors and updates the package list
-RUN $(which zsh) -c "curl -sSL https://gcore.jsdelivr.net/gh/HYwooo/install@master/mirror-apt.sh"
+RUN $(which zsh) -c "curl -sSL https://gcore.jsdelivr.net/gh/HYwooo/install@latest/mirror-apt.sh"
 
 # Install Miniconda to /miniconda
 RUN curl -LO http://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh && \
@@ -46,4 +46,4 @@ EXPOSE 8888
 
 # Jupyter Lab will be accessible on all network interfaces (0.0.0.0) and port 8888
 # No token is required for authentication, and the root user is allowed
-CMD ["$(which zsh) -c jupyter lab --ip=0.0.0.0 --port=8888 --notebook-dir=/root/docker-jupyter-rust --allow-root --no-browser --NotebookApp.token=''"]
+CMD ["/usr/bin/zsh -c jupyter lab --ip=0.0.0.0 --port=8888 --notebook-dir=/root/docker-jupyter-rust --allow-root --no-browser --NotebookApp.token=''"]
