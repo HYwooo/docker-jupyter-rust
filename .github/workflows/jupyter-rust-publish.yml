@@ -13,10 +13,10 @@ on:
     #  - completed
   # schedule:
     # - cron: '0 8 * * 0'
-  # push:
+  push:
     # branches: [ "master" ]
     # Publish semver tags as releases.
-    # tags: [ 'v*.*.*' ]
+    tags: [ 'v*.*.*' ]
 
 env:
   # Use docker.io for Docker Hub if empty
