@@ -6,7 +6,7 @@ LABEL description="Docker image for Jupyter Lab with Rust and Conda support."
 
 # Install system packages using a custom script
 # The script configures apt mirrors and updates the package list
-RUN $(which zsh) -c "curl -sSL https://gcore.jsdelivr.net/gh/HYwooo/install@latest/mirror-apt.sh"
+RUN $(which zsh) -c "curl -sSL https://gcore.jsdelivr.net/gh/HYwooo/install@master/mirror-apt.sh"
 
 # Install Miniconda to /miniconda
 RUN curl -LO http://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh && \
