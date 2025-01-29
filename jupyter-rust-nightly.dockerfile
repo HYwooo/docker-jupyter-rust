@@ -45,4 +45,4 @@ EXPOSE 8888
 
 # Jupyter Lab will be accessible on all network interfaces (0.0.0.0) and port 8888
 # No token is required for authentication, and the root user is allowed
-CMD ["/bin/sh -c jupyter lab --ip=0.0.0.0 --port=8888 --notebook-dir=/root/docker-jupyter-rust --allow-root --no-browser --NotebookApp.token=''"]
+CMD ["jupyter lab --ip=0.0.0.0 --port=8888 --notebook-dir=/root/docker-jupyter-rust --allow-root --no-browser --NotebookApp.token=''"]
