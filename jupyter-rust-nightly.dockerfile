@@ -21,7 +21,7 @@ RUN curl -LO http://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.s
 ENV PATH=/miniconda/bin:$PATH
 
 # Initialize Conda
-RUN conda init zsh && \
+RUN conda init bash && \
     conda update -y conda
 
 # Install dependencies
