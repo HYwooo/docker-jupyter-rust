@@ -6,6 +6,7 @@ name: jupyter-rust-nightly-publish
 # documentation.
 
 on:
+  workflow_dispatch:
   schedule:
      - cron: '0 18 10 * *'
 env:
