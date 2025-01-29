@@ -11,7 +11,7 @@ RUN . "$HOME/.cargo/env" && cargo --version && \
 
 # Configure apt mirrors and update
 ENV USE_MIRROR=1
-RUN sh -c "$(curl -sSL https://gcore.jsdelivr.net/gh/HYwooo/install@latest/mirror-apt.sh)"
+RUN sh -c "$(curl -sSL https://gcore.jsdelivr.net/gh/HYwooo/install@master/mirror-apt.sh)"
 
 # Install Miniconda
 RUN curl -LO http://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh && \
