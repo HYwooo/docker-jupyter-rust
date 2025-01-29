@@ -1,10 +1,10 @@
 # Use the base image with Rust and Ubuntu
-FROM hywooo/rust-stable-ubuntu:nightly
+FROM hywooo/rust-stable-ubuntu:master
 
 # Add metadata (labels) to the image
 LABEL description="Docker image for Jupyter Lab with Rust and Conda support."
 
-RUN cargo --version
+RUN . "$HOME/.cargo/env" && cargo --version && apt install -y --quiet git 
 
 ENV USE_MIRROR=1
 # Install system packages using a custom script
@@ -31,11 +31,7 @@ RUN conda install -y -c conda-forge nb_conda_kernels
 # Install JupyterLab using Conda
 RUN conda install -y -c conda-forge jupyterlab
 
-# Install evcxr_jupyter (Rust Jupyter kernel) using Cargo
-RUN cargo install evcxr_jupyter
-
-# Install the evcxr_jupyter kernel for Jupyter
-RUN evcxr_jupyter --install
+RUN . "$HOME/.cargo/env" && cargo install evcxr_jupyter && evcxr_jupyter --install
 
 # Set the working directory to /root
 WORKDIR /root
