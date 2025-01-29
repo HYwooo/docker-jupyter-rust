@@ -1,21 +1,8 @@
 name: jupyter-rust-publish
 
-# This workflow uses actions that are not certified by GitHub.
-# They are provided by a third-party and are governed by
-# separate terms of service, privacy policy, and support
-# documentation.
-
 on:
   workflow_dispatch:
-  # workflow_run:
-    # workflows: [rust-stable-ubuntu-publish]
-    # types:
-    #  - completed
-  # schedule:
-    # - cron: '0 8 * * 0'
   push:
-    # branches: [ "master" ]
-    # Publish semver tags as releases.
     tags: [ 'v*.*.*' ]
 
 env:
